@@ -1,1 +1,3 @@
-# MEDIFORECAST---Multiple-Disease-Predictor
+# MEDIFORECAST
+
+A web app to predict multiple disease.
