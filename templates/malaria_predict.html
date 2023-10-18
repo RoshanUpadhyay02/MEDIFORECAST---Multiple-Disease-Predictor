@@ -1,0 +1,62 @@
+{% extends 'main.html' %}
+{% block content %}
+<br><br><br><br><br>
+<style>
+    body {
+        font-family: Cambria, sans-serif;
+        height: 100%;
+        background-color: lightslategray; /* Soft blue background */
+        margin: 0;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        justify-content: center;
+        align-items: center;
+    }
+    .col-md-12{
+        text-align: center;
+    }
+    .card {
+        border-radius: 10px;
+        padding: 20px;
+        text-align: left;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        background-color: #FFFFFF; /* White background */
+        width: 100%;
+        max-width: 300px;
+        border-radius: 10px;
+        margin: auto; /* Horizontally center the card */
+    }
+
+    .btn-primary {
+        background-color: #0084C7; /* Dark blue button */
+        border-color: #0084C7;
+    }
+
+    .btn-primary:hover {
+        background-color: #0067A3; /* Slightly darker blue on hover */
+        border-color: #0067A3;
+    }
+</style>
+<div class="card">
+    {% if pred == 1 %}
+        <div class="alert alert-danger"><strong>POSITIVE.</strong> The patient might have the disease.</div>
+    {% else %}
+        <div class="alert alert-success"><strong>NEGATIVE.</strong> The patient is healthy.</div>
+    {% endif %}
+    {% if pred == 1 %}
+    <div class="row mt-3">
+        <div class="col-md-12">
+            <a href="{{ url_for('prescriptionMalaria') }}" class="btn btn-block btn-primary">View Presciption of Medicines</a>
+        </div>
+    </div>
+    {% else %}
+    <div class="row mt-3">
+        <div class="col-md-12">
+            <a href="{{ url_for('home') }}" class="btn btn-block btn-primary">Back to Home</a>
+        </div>
+    </div>
+    {% endif %}
+</div>
+<br><br><br><br><br><br>
+{% endblock %}
+

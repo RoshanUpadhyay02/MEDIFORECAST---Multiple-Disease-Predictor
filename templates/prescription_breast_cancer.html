@@ -1,0 +1,136 @@
+{% extends 'main.html' %}
+{% block content %}
+<br><br>
+<style>
+    body {
+        font-family: Cambria, sans-serif;
+        height: 100%;
+        background-color: lightslategray; /* Soft blue background */
+        margin: 0;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        justify-content: center;
+        align-items: center;
+    }
+    .col-md-12{
+        text-align: center;
+    }
+    .card {
+        border-radius: 10px;
+        padding: 20px;
+        text-align: left;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        background-color: #FFFFFF; /* White background */
+        width: 100%;
+        max-width: 600px;
+        border-radius: 10px;
+        margin: auto; /* Horizontally center the card */
+    }
+
+    .btn-primary {
+        background-color: #0084C7; /* Dark blue button */
+        border-color: #0084C7;
+    }
+
+    .btn-primary:hover {
+        background-color: #0067A3; /* Slightly darker blue on hover */
+        border-color: #0067A3;
+    }
+</style>
+<div class="card">
+    <div class="alert alert-primary">
+        <h3>Medicines For Breast Cancer</h3>
+        <ul>
+            <li>Abemaciclib</li>
+            <li>Abraxane (Paclitaxel Albumin-stabilized Nanoparticle Formulation)</li>
+            <li>Ado-Trastuzumab Emtansine</li>
+            <li>Afinitor (Everolimus)</li>
+            <li>Afinitor Disperz (Everolimus)</li>
+            <li>Alpelisib</li>
+            <li>Anastrozole</li>
+            <li>Aredia (Pamidronate Disodium)</li>
+            <li>Arimidex (Anastrozole)</li>
+            <li>Aromasin (Exemestane)</li>
+            <li>Capecitabine</li>
+            <li>Cyclophosphamide</li>
+            <li>Docetaxel</li>
+            <li>Doxorubicin Hydrochloride</li>
+            <li>Elacestrant Dihydrochloride</li>
+            <li>Ellence (Epirubicin Hydrochloride)</li>
+            <li>Enhertu (Fam-Trastuzumab Deruxtecan-nxki)</li>
+            <li>Epirubicin Hydrochloride</li>
+            <li>Eribulin Mesylate</li>
+            <li>Everolimus</li>
+            <li>Exemestane</li>
+            <li>5-FU (Fluorouracil Injection)</li>
+            <li>Fam-Trastuzumab Deruxtecan-nxki</li>
+            <li>Fareston (Toremifene)</li>
+            <li>Faslodex (Fulvestrant)</li>
+            <li>Femara (Letrozole)</li>
+            <li>Fluorouracil Injection</li>
+            <li>Fulvestrant</li>
+            <li>Gemcitabine Hydrochloride</li>
+            <li>Gemzar (Gemcitabine Hydrochloride)</li>
+            <li>Goserelin Acetate</li>
+            <li>Halaven (Eribulin Mesylate)</li>
+            <li>Herceptin Hylecta (Trastuzumab and Hyaluronidase-oysk)</li>
+            <li>Herceptin (Trastuzumab)</li>
+            <li>Ibrance (Palbociclib)</li>
+            <li>Infugem (Gemcitabine Hydrochloride)</li>
+            <li>Ixabepilone</li>
+            <li>Ixempra (Ixabepilone)</li>
+            <li>Kadcyla (Ado-Trastuzumab Emtansine)</li>
+            <li>Keytruda (Pembrolizumab)</li>
+            <li>Kisqali (Ribociclib)</li>
+            <li>Lapatinib Ditosylate</li>
+            <li>Letrozole</li>
+            <li>Lynparza (Olaparib)</li>
+            <li>Margenza (Margetuximab-cmkb)</li>
+            <li>Margetuximab-cmkb</li>
+            <li>Megestrol Acetate</li>
+            <li>Methotrexate Sodium</li>
+            <li>Neratinib Maleate</li>
+            <li>Nerlynx (Neratinib Maleate)</li>
+            <li>Olaparib</li>
+            <li>Orserdu (Elacestrant Dihydrochloride)</li>
+            <li>Paclitaxel</li>
+            <li>Paclitaxel Albumin-stabilized Nanoparticle Formulation</li>
+            <li>Palbociclib</li>
+            <li>Pamidronate Disodium</li>
+            <li>Pembrolizumab</li>
+            <li>Perjeta (Pertuzumab)</li>
+            <li>Pertuzumab</li>
+            <li>Pertuzumab, Trastuzumab, and Hyaluronidase-zzxf</li>
+            <li>Phesgo (Pertuzumab, Trastuzumab, and Hyaluronidase-zzxf)</li>
+            <li>Piqray (Alpelisib)</li>
+            <li>Ribociclib</li>
+            <li>Sacituzumab Govitecan-hziy</li>
+            <li>Soltamox (Tamoxifen Citrate)</li>
+            <li>Talazoparib Tosylate</li>
+            <li>Talzenna (Talazoparib Tosylate)</li>
+            <li>Tamoxifen Citrate</li>
+            <li>Taxotere (Docetaxel)</li>
+            <li>Tecentriq (Atezolizumab)</li>
+            <li>Tepadina (Thiotepa)</li>
+            <li>Thiotepa</li>
+            <li>Toremifene</li>
+            <li>Trastuzumab</li>
+            <li>Trastuzumab and Hyaluronidase-oysk</li>
+            <li>Trexall (Methotrexate Sodium)</li>
+            <li>Trodelvy (Sacituzumab Govitecan-hziy)</li>
+            <li>Tucatinib</li>
+            <li>Tukysa (Tucatinib)</li>
+            <li>Tykerb (Lapatinib Ditosylate)</li>
+            <li>Verzenio (Abemaciclib)</li>
+            <li>Vinblastine Sulfate</li>
+            <li>Xeloda (Capecitabine)</li>
+            <li>Zoladex (Goserelin Acetate)</li>
+          </ul>          
+    </div>
+</div><br>
+<div class="row mt-3">
+    <div class="col-md-12 ">
+        <a href="{{ url_for('home') }}" class="btn btn-block btn-primary" >Back to Home</a>
+    </div>
+</div>
+{% endblock %}

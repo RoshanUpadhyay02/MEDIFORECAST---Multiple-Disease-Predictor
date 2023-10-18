@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="og:title" content="Multiple Disease Predictor">
+    <meta name="author" content="Roshan Upadhyay">
+    <meta name="og:image" content="static/logo.png">
+    <meta name="Keywords" content="Flask, Machine Learning, Deep Learning, Artificial Intelligence, AI, ML,DL, Web Development">
+    <meta name="description" content="A Machine Learning and Deep Learning based webapp for Multiple Disease Prediction.">
+    <title>Multiple Disease Predictor</title>
+    <link rel="icon" href="{{ url_for('static', filename = 'logo.png') }}" type="image/icon type">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --body-bg: lightslategray;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: var(--body-bg);
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--primary-color);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            height: 60px;
+        }
+
+        nav {
+            height: 80px;
+        }
+
+        .navbar-brand img {
+            max-height: 50px;
+            width: auto;
+        }
+
+        .navbar-nav .nav-item .nav-link {
+            color: white;
+            font-size: 14px;
+            text-transform: capitalize;
+        }
+
+        .navbar-nav .nav-item .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Main Content Styles */
+        main {
+            padding: 70px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                height: 50px;
+                padding: 5px 0;
+            }
+
+            .navbar-brand img {
+                max-height: 40px;
+            }
+
+            .navbar-nav .nav-item .nav-link {
+                font-size: 12px;
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
+        <div class="container">
+            <a class="navbar-brand">
+                <img src="static/logo1.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="{{ url_for('home') }}" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for('diabetesPage') }}" class="nav-link">Diabetes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for('cancerPage') }}" class="nav-link">Breast Cancer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for('heartPage') }}" class="nav-link">Heart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for('kidneyPage') }}" class="nav-link">Kidney</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for('liverPage') }}" class="nav-link">Liver</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for('malariaPage') }}" class="nav-link">Malaria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for('pneumoniaPage') }}" class="nav-link">Pneumonia</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            {% block content %}
+            <!-- Content goes here -->
+            {% endblock %}
+        </div>
+    </main>
+    <footer>
+        <div class="container-fluid bg-dark text-white py-3">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center">
+                    <p>&copy; 2023 MEDIFORECAST. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
